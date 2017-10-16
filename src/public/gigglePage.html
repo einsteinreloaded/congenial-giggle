@@ -10,9 +10,15 @@
   </div>
   <div class="main-container">
     <div class="userform">
-      Please type your Name, Giggler
-      <input id="GigglerName" type="text" />
-      <button id="GiggleBtn" onclick="startChat()">Let's Giggle</button> 
+      <div id="ChatBox">
+        <ul id="ChatUlBox">
+
+        </ul>
+        <span id="RealTimeSpan"></span>
+      
+      <input id="giggleText" onchange="realTimeTypingFeed()" type="text" />
+      <button class="SendBtn" onclick="sendChat()">Giggle</button> 
+    </div>
     </div>
   </div>
   <script src="bundle.js"> </script>
