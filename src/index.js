@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const winston = require('winston')
-const PORT = process.env.PORT || 1337
+const PORT = process.env.PORT || 1338
 const http = require('http').Server(app)
 const io = require('socket.io')(http)
 const bodyParser = require('body-parser')
@@ -20,6 +20,13 @@ app.get('/', function (req, res) {
 
 io.on('connection', function (socket) {
   winston.info('user connected')
+  socket.on('SendingMessage', function (data) {
+    io.emit('Message from server', {data})
+  })
+
+  socket.on('Realtime feeding', function (data) {
+    socket.broadcast.emit('Realtime type feedback', {data})
+  })
 })
 
 http.listen(PORT, function () {

@@ -1,0 +1,21 @@
+#ChatBox{
+    width: 500px;
+    height: 100%;
+    margin: auto;
+}
+#ChatUlBox{
+    width: 400px;
+    height: 300px;
+    background: #daeab1;
+    text-align: left;
+    padding-top: 50px;
+}
+li{
+    list-style: none;
+}
+#RealTimeSpan{
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0 0 10px 10px;
+}
