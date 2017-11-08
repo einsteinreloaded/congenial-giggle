@@ -16,8 +16,10 @@ function sendChat () {
 }
 
 function sendMessageToServer (text) {
-  document.getElementById('giggleText').value = ''
-  socket.emit('SendingMessage', {message: text, name: localStorage.getItem('GigglerName')})
+  if (text) {
+    document.getElementById('giggleText').value = ''
+    socket.emit('SendingMessage', {message: text, name: localStorage.getItem('GigglerName')})
+  }
 }
 
 function realTimeTypingFeed () {
@@ -45,6 +47,8 @@ function addToChatBox (data) {
   li.appendChild(document.createTextNode(data.name + ' : ' + data.message))
   document.getElementById('RealTimeSpan').innerHTML = ''
   document.getElementById('ChatUlBox').appendChild(li)
+  var objDiv = document.getElementById('ChatUlBox')
+  objDiv.scrollTop = objDiv.scrollHeight
 }
 
 function notifyUser (data) {
