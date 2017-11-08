@@ -2,6 +2,8 @@
     width: 500px;
     height: 100%;
     margin: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #ChatUlBox{
     width: 400px;
@@ -9,6 +11,7 @@
     background: #daeab1;
     text-align: left;
     padding-top: 50px;
+    overflow-y: auto;
 }
 li{
     list-style: none;

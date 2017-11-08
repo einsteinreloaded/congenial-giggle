@@ -15,9 +15,10 @@
 
         </ul>
         <span id="RealTimeSpan"></span>
-      
+      <form onsubmit="event.preventDefault(); sendChat()">
       <input id="giggleText" onchange="realTimeTypingFeed()" type="text" />
-      <button class="SendBtn" onclick="sendChat()">Giggle</button> 
+      <button class="SendBtn" type="submit">Giggle</button> 
+    </form>
     </div>
     </div>
   </div>
