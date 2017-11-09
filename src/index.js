@@ -27,6 +27,10 @@ io.on('connection', function (socket) {
   socket.on('Realtime feeding', function (data) {
     socket.broadcast.emit('Realtime type feedback', {data})
   })
+  socket.on('VideoStream', function (data) {
+    console.log(data)
+    io.emit('VideoStreamrecieved', {data})
+  })
 })
 
 http.listen(PORT, function () {
