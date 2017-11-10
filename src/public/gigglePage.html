@@ -9,6 +9,14 @@
     <h2>Congenial Giggle</h2>
   </div>
   <div class="main-container">
+    Record and Send a Video Message:
+    <button id="startBtn" onclick="startVideo()">Start recording video</button>
+    <video id="send" style="display:none"></video>
+    <button id="stopBtn" style="display:none" onclick="stopVideo()">Stop Video</button>
+    <div id="recieve" style="display:none">
+    <span>Recieved video message:</span>
+    <video></video>
+    </div>
     <div class="userform">
       <div id="ChatBox">
         <ul id="ChatUlBox">
